@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #1acc83;
+  --secondary: #f1456d;
+  --dark: #0F9D58;
+  --light-gray: #f9f9f9;
+  --text-color: #333;
+  --background: #fdfdfd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+body {
+  background: var(--background);
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid var(--light-gray);
+  background: #fff;
+}
+
+.navbar h1 {
+  color: var(--dark);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.userButtons *{
+  margin-left: 20px;
+}
+
+.navbar button:hover {
+  background: #148a60;
+}
+
+.userButtons span{
+  border: 1px solid #f1456d;
+  background-color: #f1456d;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 5px;
+}
+
+.Authenticate *{
+  margin-left: 20px;
+}
+
+/* Blog Page Container */
+.pages {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Entries */
+.entry-preview {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  margin: 20px 0;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.entry-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.entry-preview h2 {
+  font-size: 22px;
+  color: var(--secondary);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.entry-preview p {
+  font-size: 16px;
+  color: var(--text-color);
+  text-align: left;
+  opacity: 0.8;
+}
+
+/* Blog Post Details */
+.entry-details {
+  background: #fff;
+  padding: 25px;
+  border-left: 6px solid var(--dark);
+  border-radius: 6px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+.entry-details h2 {
+  font-size: 26px;
+  color: var(--dark);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.entry-details article {
+  margin: 10px 0;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* Forms */
+.create, form.signup, form.login {
+  max-width: 700px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create h2, form h2 {
+  font-size: 22px;
+  color: var(--dark);
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.create label, form label {
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.create input, .create textarea, 
+form input, form select, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: block;
+  font-size: 16px;
+}
+
+/* Buttons */
+.entry-details button, 
+.create button, 
+form.signup button, 
+form.login button {
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.entry-details button:hover,
+.create button:hover,
+form.signup button:hover,
+form.login button:hover {
+  background: #0c7d46;
+}
+
+/* Error Messages */
+div.error {
+  padding: 12px;
+  background: #ffefef;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+input.error {
+  border: 1px solid var(--secondary);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .pages {
+    padding: 20px;
+  }
+  
+  .entry-preview, .entry-details {
+    padding: 15px;
+  }
+  
+  .entry-preview h2, .entry-details h2 {
+    font-size: 20px;
+  }
+
+  .create, form.signup, form.login {
+    max-width: 100%;
+  }
+}
